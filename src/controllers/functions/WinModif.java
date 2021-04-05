@@ -79,7 +79,7 @@ public class WinModif {
         });
         to_profile.setOnMouseClicked(Event -> {
             try {
-                NewWin(inventoryStage, "menus/profile");
+                NewWin(inventoryStage, "menus/inventory");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -99,3 +99,4 @@ public class WinModif {
     }
 
 }
+

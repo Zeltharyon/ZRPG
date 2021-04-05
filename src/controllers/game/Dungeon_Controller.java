@@ -23,12 +23,13 @@ import java.util.TimerTask;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import static controllers.functions.WinModif.*;
-import static controllers.menus.Profile_Controller.inventoryStage;
 
 public class Dungeon_Controller implements Initializable {
 
     //Déclaration des attributs
 
+    // <Button id="action" fx:id="defend" alignment="CENTER" contentDisplay="CENTER" layoutX="443.0" layoutY="140.0" maxHeight="99.0" maxWidth="99.0" minHeight="99.0" minWidth="99.0" mnemonicParsing="false" prefHeight="99.0" prefWidth="99.0" />
+    // <Button id="action" fx:id="defend" alignment="CENTER" contentDisplay="CENTER" layoutX="180.0" layoutY="14.0" maxHeight="99.0" maxWidth="99.0" minHeight="99.0" minWidth="99.0" mnemonicParsing="false" prefHeight="99.0" prefWidth="99.0" />
     @FXML
     public Label playerName;
     public Pane actionBar;
@@ -65,10 +66,9 @@ public class Dungeon_Controller implements Initializable {
         Dungeon dungeon = new Dungeon();
         Image img = new Image(new File("src/views/resources/pictures/actions/flee.png").toURI().toString());
         ImageView view = new ImageView(img);
+        System.out.println(Player_Profile.getPlayer().getFilepicName());
         flee.setGraphic(view);
-        img = new Image(new File("src/views/resources/pictures/actions/bag.png").toURI().toString());
-        view = new ImageView(img);
-        to_profile.setGraphic(view);
+
         img = new Image(new File("src/views/resources/pictures/actions/" + Player_Profile.getPlayer().getFilepicName() + "/attack.png").toURI().toString());
         view = new ImageView(img);
         attack.setGraphic(view);
@@ -102,14 +102,14 @@ public class Dungeon_Controller implements Initializable {
         });
         back_to_city.setOnMouseClicked(Event -> {
             try {
-                WinChange("game/city");
+                WinChange("Game/City");
             } catch (IOException e) {
                 e.printStackTrace();
             }
         });
         flee.setOnMouseClicked(Event -> {
             try {
-                WinChange("game/city");
+                WinChange("Game/City");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -120,6 +120,7 @@ public class Dungeon_Controller implements Initializable {
 
     public void close() throws IOException {
         WinClose();
+
     }
 
     //Création d'une pièce
@@ -176,6 +177,14 @@ public class Dungeon_Controller implements Initializable {
                             attack.setVisible(false);
                             flee.setVisible(false);
                             new PerfectParry(1, attack, flee, defend, currentMonster, pvAmount, goldAmount, healthBar, lifeMob, msgBox);
+                        }
+                    }
+                    if(player.getPv() <= 0){
+                        player.setPv(1);
+                        try {
+                            WinChange("Game/City");
+                        } catch (IOException e) {
+                            e.printStackTrace();
                         }
                     }
                 });
@@ -274,6 +283,7 @@ public class Dungeon_Controller implements Initializable {
                             player.setPv(player.getPv() - (currentMonster.getDmg() - player.getDef()));
                             if(currentMonster.getPv() > 2) {
                                 currentMonster.setPv(currentMonster.getPv() - 2);
+                                System.out.println(currentMonster.getPv());
                             }
                         }
 
@@ -299,6 +309,9 @@ public class Dungeon_Controller implements Initializable {
             float mobpv = currentMonster.getPv();
             float mobmaxpv = currentMonster.getMaxPv();
             mobBar.setProgress(mobpv/mobmaxpv);
+            isDodged = false;
+            isBlocked = false;
+            isNegated = false;
         }
     }
 }

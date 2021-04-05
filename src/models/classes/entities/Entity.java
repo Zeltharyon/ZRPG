@@ -21,7 +21,6 @@ public class Entity {
     private int def;
     private String defense_type;
     private double defchance;
-    private double deftime;
     private int gold;
     private int maxPv;
 
@@ -38,7 +37,7 @@ public class Entity {
                 this.dmgchance = 4; // stat sur 1D12
                 this.def = 4;
                 this.defense_type = "shield";
-                this.deftime = 0.9; // stat sur 1D12
+                this.defchance = 0.9; // stat sur 1D12
                 this.gold = 0;
                 this.maxPv = pv;
             }
@@ -51,7 +50,7 @@ public class Entity {
                 this.dmgchance = 10; // stat sur 1D12
                 this.def = 3;
                 this.defense_type= "magic_shield";
-                this.deftime = 0.7; // stat sur 1D12
+                this.defchance = 0.7; // stat sur 1D12
                 this.gold = 0;
                 this.maxPv = pv;
             }
@@ -64,7 +63,7 @@ public class Entity {
                 this.dmgchance = 7; // stat sur 1D12
                 this.def = 2;
                 this.defense_type = "dodge";
-                this.deftime = 0.450; // stat sur 1D12
+                this.defchance = 0.450; // stat sur 1D12
                 this.gold = 50;
                 this.maxPv = pv;
             }
@@ -118,33 +117,39 @@ public class Entity {
     }
 
     public String attack(Entity attaquant, Entity cible){
+        System.out.println("Lancer de dé...");
         int diceroll = new Dice(12).roll();
 
         if (diceroll <= attaquant.dmgchance){
-            if(cible.mstrdefend(cible)){
+            if(cible.defend(cible)){
+                System.out.println(diceroll +" l'attaque touche, mais la cible réduit ses dégâts de " + cible.def +" !");
                 if(attaquant.dmg - cible.def > 0){
                     cible.pv = cible.pv - (attaquant.dmg - cible.def);
                     return diceroll + "/" + attaquant.dmgchance + " -> Succès ! Mais la cible se défend et réduit ses dégâts de " + cible.def;
                 }
             }
             else{
+                System.out.println("L'attaque touche et inflige " + attaquant.dmg + " points de dégâts à " + cible.name);
                 cible.pv = cible.pv - attaquant.dmg;
                 return diceroll + "/" + attaquant.dmgchance + " -> Succès !";
             }
         }
         else {
+            System.out.println(diceroll + "/" + attaquant.dmgchance + " - L'attaque rate !");
             return diceroll + "/" + attaquant.dmgchance + " -> Échec !";
         }
         return "";
     }
 
-    public boolean mstrdefend(Entity defenseur){
+    public boolean defend(Entity defenseur){
         int diceroll = new Dice(12).roll();
 
         if (diceroll <= defenseur.defchance){
+            System.out.println(diceroll + "/" + defenseur.defchance + " - Succès de la défense de " + defenseur.name +" !");
             return true;
         }
         else {
+            System.out.println(diceroll + "/" + defenseur.defchance + " - Echec de la défense de " + defenseur.name +" !");
             return false;
         }
     }

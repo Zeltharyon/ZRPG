@@ -26,7 +26,7 @@
       <Button id="to_profile" fx:id="to_profile" layoutX="477.0" layoutY="10.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" />
    </Pane>
 
-   <Pane id="actionBar" fx:id="actionBar" layoutY="438.0" prefHeight="253.0" prefWidth="720.0">
+   <Pane id="actionBar" fx:id="actionBar" layoutY="437.0" prefHeight="253.0" prefWidth="720.0">
       <Button id="city_to_dungeon" layoutX="549.0" layoutY="182.0" mnemonicParsing="false" onMouseClicked="#to_dungeon" prefHeight="57.0" prefWidth="157.0" text="Partir vers le Donjon" />
       <Button id="city_to_shop" layoutX="14.0" layoutY="182.0" mnemonicParsing="false" onMouseClicked="#to_shop" prefHeight="57.0" prefWidth="157.0" text="Aller à l'échoppe" />
    </Pane>

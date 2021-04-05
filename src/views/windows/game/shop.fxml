@@ -27,7 +27,7 @@
       <Button id="to_profile" fx:id="to_profile" layoutX="477.0" layoutY="10.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" />
    </Pane>
 
-   <Pane id="actionBar" fx:id="actionBar" layoutY="438.0" prefHeight="253.0" prefWidth="720.0">
+   <Pane id="actionBar" fx:id="actionBar" layoutX="5.0" layoutY="438.0" prefHeight="247.0" prefWidth="710.0">
       <Button id="shop_to_city" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#to_city" prefHeight="57.0" prefWidth="157.0" text="Revenir en ville" />
       <Pane layoutX="369.0" layoutY="24.0" prefHeight="200.0" prefWidth="320.0">
          <ListView id="listItems" fx:id="listItems" prefHeight="175.0" prefWidth="320.0" />
