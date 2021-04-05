@@ -8,7 +8,7 @@ Il s'agit d'un mini-RPG statique, au tour par tour, très simpliste mais techniq
 ### **Bibliothèques requises:**
 
 Celui-ci est réalisé à l'aide du framework **JavaFX**, permettant une création simple d'interface graphique. La bibliothèque **GSON** est également requise, pour la création et l'exploitation des sauvegardes.
-
+Pour parvenir à setup convenablement JavaFX, sur IntelliJ, l'installer en tant que librairie de projet, l'ajouter en tant que modules, et ajouter dans "Run/Edit configurations" une option de VM telle que "--module-path "chemin_pointant_vers_le_dossier_lib_du_sdk_JavaFX" --add-modules javafx.controls,javafx.fxml"
 ### **Outils utilisés:**
 
 _-Langage:_ **Java**  
