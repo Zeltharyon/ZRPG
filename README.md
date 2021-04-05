@@ -1,7 +1,6 @@
-![Logo](src/views/resources/pictures/icons/icon_RPG.png)
-
-
 # ZRPG
+
+![Logo](src/views/resources/pictures/icons/icon_RPG.png)
 
 Premier projet réalisé en JavaFX.
 
