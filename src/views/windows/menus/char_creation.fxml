@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane id="window" prefHeight="600.0" prefWidth="834.0" stylesheets="@../../stylesheets/menus_windows.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.menus.Char_Creation_Controller">
+
+   <Button id="close" fx:id="close" layoutX="781.0" layoutY="4.0" mnemonicParsing="false" onMouseClicked="#close" prefHeight="28.0" prefWidth="49.0" text="❌" />
+
+   <Label id="text_menu" layoutX="287.0" layoutY="45.0" prefHeight="39.0" prefWidth="262.0" text="Saisissez votre nom: " />
+   <TextField id="nameForm" fx:id="username" layoutX="268.0" layoutY="84.0" prefHeight="49.0" prefWidth="300.0" />
+
+   <Label id="text_menu" layoutX="287.0" layoutY="133.0" prefHeight="39.0" prefWidth="262.0" text="Choisissez une classe: " />
+   <ComboBox id="choixClasse" fx:id="choixClasse" layoutX="268.0" layoutY="172.0" onAction="#changeLab" prefHeight="49.0" prefWidth="300.0" promptText="Sélectionnez une classe: " visibleRowCount="3" />
+
+   <Pane id="cadreClasse" layoutX="122.0" layoutY="235.0" prefHeight="250.0" prefWidth="590.0">
+      <Label id="label_classe" fx:id="lab_class" layoutX="215.0" layoutY="18.0" prefHeight="37.0" prefWidth="102.0" text="Classe" />
+      <ImageView id="logoClasse" fx:id="logoClasse" fitHeight="214.0" fitWidth="262.0" layoutX="27.0" layoutY="18.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+         <viewport>
+            <Rectangle2D height="256.0" width="256.0" />
+         </viewport>
+      </ImageView>
+      <Pane id="desc" layoutX="343.0" layoutY="11.0" prefHeight="228.0" prefWidth="233.0">
+         <Text fx:id="descripClasse" boundsType="LOGICAL_VERTICAL_CENTER" layoutX="22.0" layoutY="30.0" strokeType="OUTSIDE" wrappingWidth="190.0" />
+      </Pane>
+   </Pane>
+
+   <Button id="btnConfirm" fx:id="confirm" layoutX="496.0" layoutY="494.0" mnemonicParsing="false" onMouseClicked="#creation" prefHeight="49.0" prefWidth="190.0" text="Confirmer" />
+   <Button id="back" layoutX="14.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#back" prefHeight="41.0" prefWidth="90.0" text="🠔" />
+</Pane>

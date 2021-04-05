@@ -1,0 +1,14 @@
+{
+  "name": "Azryon",
+  "id": 0,
+  "classe": "Mage",
+  "filepicName": "wizard",
+  "pv": 44,
+  "dmg": 18,
+  "dmgchance": 10,
+  "def": 3,
+  "defense_type": "magic_shield",
+  "defchance": 0.7,
+  "gold": 186,
+  "maxPv": 50
+}

@@ -1,0 +1,226 @@
+@font-face {
+    font-family: 'Luminari';
+    src: url("../resources/fonts/Luminari.ttf");
+}
+
+
+/* Universal */
+
+#window {
+    -fx-background-color: #542b00;
+    -fx-background-radius: 15;
+    /*-fx-border-width: 7;
+    -fx-border-color: silver;*/
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.8), 50, 0, 0, 0);
+}
+#close{
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-text-fill: gold;
+    -fx-font-size: 15;
+}
+#close:hover{
+    -fx-text-fill: red;
+}
+
+#Image{
+    -fx-border-width: 5;
+    -fx-border-color: darkgrey;
+}
+#playerBar{
+    -fx-background-color: #ffe399;
+    -fx-border-width: 4 0 4 0;
+    -fx-border-color: darkgrey;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 50, 0, 0, 0);
+}
+#playerName{
+    -fx-font-family: 'Luminari';
+    -fx-font-size: 17;
+    -fx-padding: 0 0 7px 0;
+    -fx-alignment: center;
+    -fx-content-display: text-only;
+    -fx-text-alignment: center;
+}
+#pvAmount{
+    -fx-alignment: center;
+    -fx-font-size: 17;
+    -fx-font-family: Bahnschrift;
+}
+#goldAmount{
+    -fx-alignment: center-right;
+    -fx-font-size: 20;
+    -fx-font-family: Bahnschrift;
+}
+#actionBar{
+    -fx-background-color: #542b00;
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.8), 50, 0, 0, 0);
+    -fx-background-radius: 0 0 15 15;
+}
+
+
+/* City */
+
+#city_to_shop{
+    -fx-background-color: #8d4b00;
+    -fx-text-fill: white;
+    -fx-border-color: yellow;
+    -fx-border-width: 2px;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-font-family: 'Luminari';
+    -fx-font-size: 15;
+    -fx-padding: 0 0 5px 0;
+    -fx-cursor: hand;
+}
+#city_to_shop:hover{
+    -fx-effect: innershadow(three-pass-box, rgb(150, 130, 0), 20, 0, 0, 0);
+}
+#city_to_dungeon{
+    -fx-background-color: #400000;
+    -fx-text-fill: white;
+    -fx-border-color: silver;
+    -fx-border-width: 2px;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-font-family: 'Luminari';
+    -fx-font-size: 15;
+    -fx-padding: 0 0 5px 0;
+    -fx-cursor: hand;
+}
+#city_to_dungeon:hover{
+    -fx-effect: innershadow(three-pass-box, rgb(255, 0, 0), 20, 0, 0, 0);
+}
+
+/* Dungeon */
+
+#round{
+    -fx-font-size: 20px;
+    -fx-font-family: 'Luminari';
+    -fx-text-fill: gold;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+}
+#to_profile{
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+#action{
+    -fx-background-color: #281400;
+    -fx-background-radius: 5px;
+    -fx-border-color: #454545;
+    -fx-border-radius: 5px;
+}
+#action:hover{
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(three-pass-box, rgb(167, 0, 0), 10, 0, 0, 0);
+    -fx-cursor: hand;
+}
+#roomNbr{
+    -fx-text-fill: white;
+    -fx-font-size: 17;
+    -fx-alignment: CENTER_RIGHT;
+    -fx-font-family: 'Luminari';
+}
+#mnstrNbr{
+    -fx-text-fill: orange;
+    -fx-font-size: 17;
+    -fx-alignment: CENTER_LEFT;
+    -fx-font-family: 'Luminari';
+}
+#dungeonEnd{
+    -fx-alignment: CENTER;
+    -fx-font-family: 'Luminari';
+    -fx-font-size: 25;
+    -fx-text-fill: gold;
+}
+#msgBox{
+    -fx-alignment: center;
+    -fx-background-color: #e0ae67;
+    -fx-border-color: #432000;
+    -fx-font-family: 'Luminari';
+    -fx-font-size: 17;
+    -fx-wrap-text: true;
+    -fx-label-padding: 0,0,0,7;
+    -fx-opacity: 0.7;
+}
+#dungeon_to_city{
+    -fx-background-color: #737373;
+    -fx-text-fill: white;
+    -fx-border-color: #00ffe8;
+    -fx-border-width: 2px;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-font-family: 'Luminari';
+    -fx-font-size: 15;
+    -fx-padding: 0 0 5px 0;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+    -fx-cursor: hand;
+}
+#dungeon_to_city:hover{
+    -fx-effect: innershadow(three-pass-box, rgb(231, 128, 255), 20, 0, 0, 0);
+}
+#explore{
+    -fx-background-color: #6e0202;
+    -fx-text-fill: white;
+    -fx-border-color: #000000;
+    -fx-border-width: 2px;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-font-family: 'Luminari';
+    -fx-font-size: 15;
+    -fx-padding: 0 0 5px 0;
+    -fx-cursor: hand;
+}
+#explore:hover{
+    -fx-effect: innershadow(three-pass-box, rgb(255, 0, 0), 20, 0, 0, 0);
+}
+
+
+/* Shop */
+
+#tooPoor{
+    -fx-alignment: center;
+    -fx-background-color: #e0ae67;
+    -fx-border-color: #432000;
+    -fx-font-family: 'Luminari';
+    -fx-font-size: 17;
+}
+#listItems{
+    -fx-font-size: 15;
+    -fx-font-family: Bahnschrift;
+    -fx-border-width: 2;
+    -fx-border-color: #8a7601;
+}
+.list-cell:odd {
+    -fx-background-color: #6b3500;
+    -fx-text-fill: gold;
+}
+.list-cell:even {
+    -fx-background-color: #402000;
+    -fx-text-fill: gold;
+}
+.list-cell:selected{
+    -fx-background-color: #4c0000;
+}
+#shop_to_city{
+    -fx-background-color: #5d2b00;
+    -fx-text-fill: white;
+    -fx-border-color: #be5100;
+    -fx-border-width: 2px;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-font-family: 'Luminari';
+    -fx-font-size: 15;
+    -fx-padding: 0 0 5px 0;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+    -fx-cursor: hand;
+}
+#shop_to_city:hover{
+    -fx-effect: innershadow(three-pass-box, rgb(190, 81, 0), 20, 0, 0, 0);
+}

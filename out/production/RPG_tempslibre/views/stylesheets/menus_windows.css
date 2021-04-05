@@ -1,0 +1,268 @@
+@font-face {
+    font-family: 'Luminari';
+    src: url("../resources/fonts/Luminari.ttf");
+}
+
+/* Universal */
+
+#window {
+    -fx-background-color: #542b00;
+    -fx-background-radius: 15;
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.8), 50, 0, 0, 0);
+}
+#close{
+    -fx-background-color: silver;
+    -fx-cursor: hand;
+}
+#close:hover{
+    -fx-text-fill: red;
+}
+
+/* Start_Menu */
+
+#picture {
+    -fx-background-color: #281400;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 50, 0, 0, 0);
+}
+#title {
+    -fx-text-alignment: center;
+    -fx-font-size: 30px;
+    -fx-text-fill: gold;
+    -fx-font-family: 'Luminari';
+}
+#play{
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: #be9100;
+    -fx-border-color: #be9100;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 15px;
+    -fx-font-family: 'Luminari';
+    -fx-font-size: 20;
+    -fx-padding: 0 0 5px 0;
+    -fx-cursor: hand;
+}
+#play:hover{
+    -fx-effect: dropshadow(three-pass-box, rgb(141, 118, 0), 50, 0, 0, 0);
+}
+
+/* Main_Menu */
+
+#main_title{
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-font-size: 30px;
+    -fx-text-fill: gold;
+    -fx-font-family: 'Luminari';
+    -fx-background-color: #180d01;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+#menu_box{
+    -fx-alignment: center;
+    -fx-padding: 25;
+    -fx-spacing: 50;
+}
+#menu_btn{
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: #be9100;
+    -fx-border-color: #be9100;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 15px;
+    -fx-font-family: 'Luminari';
+    -fx-font-size: 20;
+    -fx-padding: 0 0 5px 0;
+    -fx-cursor: hand;
+    -fx-alignment: center;
+    -fx-content-display: center;
+}
+#menu_btn:hover{
+    -fx-effect: dropshadow(three-pass-box, rgb(141, 118, 0), 50, 0, 0, 0);
+}
+
+/* Saves_Selection */
+
+#choose{
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: #108f00;
+    -fx-border-color: #be9100;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 15px;
+    -fx-font-family: 'Luminari';
+    -fx-font-size: 20;
+    -fx-padding: 0 0 5px 0;
+    -fx-cursor: hand;
+    -fx-alignment: center;
+    -fx-content-display: center;
+}
+#choose:hover{
+    -fx-effect: dropshadow(gaussian, #15b300, 20, 0, 0, 0);
+}
+
+#delete{
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: #6b0000;
+    -fx-border-color: #be9100;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 15px;
+    -fx-font-family: 'Luminari';
+    -fx-font-size: 20;
+    -fx-padding: 0 0 5px 0;
+    -fx-cursor: hand;
+    -fx-alignment: center;
+    -fx-content-display: center;
+}
+#delete:hover{
+    -fx-effect: dropshadow(gaussian, #910000, 20, 0, 0, 0);
+}
+#alert{
+    -fx-background-color: #542b00;
+    -fx-background-radius: 7;
+    -fx-border-radius: 7;
+    -fx-border-width: 3px;
+    -fx-border-color: gold;
+}
+#header{
+    -fx-text-fill: yellow;
+    -fx-font-size: 17;
+    -fx-font-weight: bolder;
+}
+#contentText{
+    -fx-text-fill: white;
+    -fx-font-size: 14;
+}
+#no,#yes{
+    -fx-background-color: #1d1d1d;
+    -fx-border-color: #be9100;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 15px;
+    -fx-font-size: 15;
+    -fx-font-weight: bolder;
+    -fx-cursor: hand;
+    -fx-alignment: center;
+    -fx-content-display: center;
+}
+#yes{
+    -fx-text-fill: #12b500;
+}
+#no{
+    -fx-text-fill: #b30000;
+}
+#back {
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: #c86000;
+    -fx-border-color: #be9100;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 15px;
+    -fx-font-size: 30;
+    -fx-padding: -5 0 0 0;
+    -fx-cursor: hand;
+    -fx-alignment: center;
+    -fx-content-display: center;
+}
+#back:hover{
+    -fx-effect: dropshadow(gaussian, #c86000, 20, 0, 0, 0);
+}
+
+#listSave{
+    -fx-font-size: 15;
+    -fx-font-family: 'Luminari';
+    -fx-border-width: 2;
+    -fx-border-color: #8a7601;
+    -fx-background-color: #ffcb93;
+}
+.list-cell:odd {
+    -fx-background-color: #ffcb93;
+    -fx-text-fill: #24005d;
+}
+.list-cell:even {
+    -fx-background-color: #ffcb93;
+    -fx-text-fill: #24005d;
+}
+.list-cell:selected{
+    -fx-background-color: #9b9b9b;
+}
+/* Character_Creation */
+
+#text_menu{
+    -fx-text-fill: #ffb700;
+    -fx-font-family: Garamond;
+    -fx-font-size: 25px;
+    -fx-text-alignment: center;
+}
+#nameForm{
+    -fx-cursor: text;
+}
+#choixClasse{
+    -fx-cursor: hand;
+}
+#desc{
+    -fx-background-color: #ffe399;
+    -fx-border-width: 2px;
+    -fx-border-color: darkgrey;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+}
+#label_classe{
+    -fx-font-family: 'Luminari';
+    -fx-font-size: 20px;
+    -fx-text-alignment: center;
+    -fx-text-fill: white;
+    -fx-alignment: top-center;
+}
+#cadreClasse{
+    -fx-background-color: #180d01;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+#desc {
+    -fx-font-family: Garamond;
+    -fx-font-size: 15;
+    -fx-stroke-width: 0;
+}
+#btnConfirm{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-font-family: 'Luminari';
+    -fx-font-size: 13;
+    -fx-border-width: 2px;
+    -fx-border-color: black;
+    -fx-border-radius: 2px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+#btnConfirm:hover{
+    -fx-background-color: darkgreen;
+    -fx-text-fill: black;
+}
+
+/* Profile_Page */
+
+#invWindow {
+    -fx-background-color: #542b00;
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.8), 50, 0, 0, 0);
+}
+
+#class_lab{
+    -fx-text-alignment: center;
+    -fx-font-size: 20px;
+    -fx-text-fill: silver;
+    -fx-font-family: 'Luminari';
+}
+
+#info_plate{
+    -fx-background-color: #545454;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 50, 0, 0, 0);
+}
+
+#info{
+    -fx-text-fill: white;
+    -fx-font-size: 15;
+}

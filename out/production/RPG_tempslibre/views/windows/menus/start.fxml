@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane id="window" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="429.0" prefWidth="416.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@../../stylesheets/menus_windows.css" fx:controller="controllers.menus.Start_Window_Controller">
+
+   <Pane id="picture" layoutX="83.0" layoutY="35.0" prefHeight="238.0" prefWidth="251.0">
+      <Label id="title" alignment="CENTER" layoutX="56.0" layoutY="14.0" prefHeight="56.0" prefWidth="138.0" text="ZRPG" />
+      <ImageView fx:id="logo" fitHeight="155.0" fitWidth="165.0" layoutX="48.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../../resources/pictures/logoRPG.png" />
+      </ImageView>
+   </Pane>
+
+   <Button fx:id="run" id="play" layoutX="122.0" layoutY="314.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="174.0" text="Jouer" textAlignment="CENTER"/>
+
+</Pane>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="window" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="600.0" stylesheets="@../../stylesheets/menus_windows.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.menus.Main_Menu_Controller">
+
+    <Label id="main_title" layoutX="193.0" layoutY="23.0" prefHeight="110.0" prefWidth="215.0" text="ZRPG" />
+    <VBox id="menu_box" layoutX="50.0" layoutY="133.0" prefHeight="470.0" prefWidth="500.0">
+        <Button id="menu_btn" fx:id="new_game_btn" mnemonicParsing="false" onMouseClicked="#new_game" prefHeight="75.0" prefWidth="450.0" text="Nouvelle partie" />
+        <Button id="menu_btn" fx:id="load_game_btn" mnemonicParsing="false" onMouseClicked="#load_game" prefHeight="75.0" prefWidth="450.0" text="Charger une partie" />
+        <Button id="menu_btn" fx:id="exit_btn" mnemonicParsing="false" onMouseClicked="#close" prefHeight="75.0" prefWidth="450.0" text="Quitter" />
+    </VBox>
+
+</AnchorPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="window" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="720.0" stylesheets="@../../stylesheets/game_windows.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.game.Shop_Controller">
+
+   <Button id="close" fx:id="close" layoutX="675.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#close" prefHeight="40.0" prefWidth="40.0" text="❌" />
+
+   <Pane id="Image" layoutX="96.0" layoutY="28.0" prefHeight="320.0" prefWidth="520.0">
+      <ImageView fx:id="shopImage" fitHeight="310.0" fitWidth="510.0" layoutX="5.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <viewport>
+            <Rectangle2D height="310.0" width="510.0" />
+         </viewport>
+      </ImageView>
+      <Label id="tooPoor" fx:id="tooPoor" layoutX="265.0" layoutY="280.0" prefHeight="35.0" prefWidth="250.0" />
+   </Pane>
+
+   <Pane id="playerBar" layoutY="368.0" prefHeight="69.0" prefWidth="720.0">
+      <Label id="playerName" fx:id="playerName" layoutY="17.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" prefWidth="138.0" />
+      <ProgressBar id="healthBar" fx:id="healthBar" layoutX="138.0" layoutY="22.0" prefHeight="25.0" prefWidth="200.0" progress="1.0" />
+      <Label id="pvAmount" fx:id="pvAmount" layoutX="338.0" layoutY="21.0" prefHeight="28.0" prefWidth="100.0" />
+      <ImageView fx:id="coin" fitHeight="32.0" fitWidth="32.0" layoutX="654.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" />
+      <Label id="goldAmount" fx:id="goldAmount" layoutX="568.0" layoutY="22.0" prefHeight="25.0" prefWidth="75.0" />
+      <Button id="to_profile" fx:id="to_profile" layoutX="477.0" layoutY="10.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" />
+   </Pane>
+
+   <Pane id="actionBar" fx:id="actionBar" layoutY="438.0" prefHeight="253.0" prefWidth="720.0">
+      <Button id="shop_to_city" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#to_city" prefHeight="57.0" prefWidth="157.0" text="Revenir en ville" />
+      <Pane layoutX="369.0" layoutY="24.0" prefHeight="200.0" prefWidth="320.0">
+         <ListView id="listItems" fx:id="listItems" prefHeight="175.0" prefWidth="320.0" />
+         <Button fx:id="buy" layoutY="174.0" mnemonicParsing="false" onMouseClicked="#buy" prefHeight="20.0" prefWidth="320.0" text="Acheter" />
+      </Pane>
+   </Pane>
+
+</AnchorPane>
