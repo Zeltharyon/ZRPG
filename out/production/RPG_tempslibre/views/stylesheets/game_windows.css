@@ -25,7 +25,10 @@
 #close:hover{
     -fx-text-fill: red;
 }
-
+#to_profile{
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
 #Image{
     -fx-border-width: 5;
     -fx-border-color: darkgrey;
@@ -103,10 +106,7 @@
     -fx-alignment: center;
     -fx-text-alignment: center;
 }
-#to_profile{
-    -fx-background-color: transparent;
-    -fx-cursor: hand;
-}
+
 #action{
     -fx-background-color: #281400;
     -fx-background-radius: 5px;
